@@ -1,10 +1,3 @@
-//
-//  CardOnFileDashboardViewController.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/06.
-//
-
 import RIBs
 import UIKit
 import FinanceUserInterface

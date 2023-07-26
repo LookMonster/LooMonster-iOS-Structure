@@ -1,10 +1,3 @@
-//
-//  CardOnFileRepository.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/06.
-//
-
 import Foundation
 import CSNetwork
 import FinanceData

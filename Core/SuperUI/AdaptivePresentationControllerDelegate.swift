@@ -1,10 +1,3 @@
-//
-//  AdaptivePresentationControllerDelegate.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/14.
-//
-
 import UIKit
 
 public protocol AdaptivePresentationControllerDelegate: AnyObject {

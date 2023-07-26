@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//
-//  ModulariedSuperApp
-//
-//  Created by 김찬수
-//
-
 import UIKit
 import RIBs
 

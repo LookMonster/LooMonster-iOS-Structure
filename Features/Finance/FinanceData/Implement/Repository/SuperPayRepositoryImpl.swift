@@ -1,10 +1,3 @@
-//
-//  SuperPayRepository.swift
-//  MiniSuperApp
-//
-//  Created by 김찬수 on 2023/03/17.
-//
-
 import Foundation
 
 import CSNetwork

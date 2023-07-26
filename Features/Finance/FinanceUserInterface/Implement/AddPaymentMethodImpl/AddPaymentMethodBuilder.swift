@@ -1,11 +1,3 @@
-//
-//  AddPaymentMethodBuilder.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/06.
-//
-
-
 import FinanceData
 import FinanceDomain
 import FinanceUserInterface

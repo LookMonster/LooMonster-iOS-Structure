@@ -1,10 +1,3 @@
-//
-//  AddPaymentMethodInfo.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/14.
-//
-
 import Foundation
 
 public struct AddPaymentMethodInfo {

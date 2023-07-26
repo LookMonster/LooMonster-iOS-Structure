@@ -1,10 +1,3 @@
-//
-//  SuperPayDashboardBuilder.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/02/28.
-//
-
 import RIBs
 import Foundation
 import RxSwift

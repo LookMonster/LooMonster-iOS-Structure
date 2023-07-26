@@ -1,10 +1,3 @@
-//
-//  CardOnFileInteractor.swift
-//  MiniSuperApp
-//
-//  Created by 김찬수 on 2023/03/16.
-//
-
 import RIBs
 import FinanceDomain
 import FinanceUserInterface

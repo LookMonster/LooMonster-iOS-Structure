@@ -1,10 +1,3 @@
-//
-//  AppComponent.swift
-//  App
-//
-//  Created by kimchansoo on 2023/04/02.
-//
-
 import Foundation
 import RIBs
 

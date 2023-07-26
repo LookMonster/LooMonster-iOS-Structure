@@ -1,10 +1,3 @@
-//
-//  TopupInteractor.swift
-//  MiniSuperApp
-//
-//  Created by kimchansoo on 2023/03/14.
-//
-
 import RIBs
 
 import RIBsUtil
