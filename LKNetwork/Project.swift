@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 import UtilityPlugin
 
 let project = Project.invertedDualTargetProject(
-    name: "CSNetwork",
+    name: "LKNetwork",
     platform: .iOS,
     iOSTargetVersion: "15.0.0",
     interfaceDependencies: [

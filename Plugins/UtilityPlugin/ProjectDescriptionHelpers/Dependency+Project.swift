@@ -35,7 +35,7 @@ extension TargetDependency {
         
     }
     
-    public struct CSNetwork {}
+    public struct LKNetwork {}
     
     public struct ResourceKit {}
 
@@ -169,18 +169,18 @@ public extension TargetDependency.Feature.Home.Data {
 
 
 // MARK: - Network
-public extension TargetDependency.CSNetwork {
-    static let folderName = "CSNetwork"
+public extension TargetDependency.LKNetwork {
+    static let folderName = "LKNetwork"
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(
             target: "\(name)\(postfix)",
-            path: .relativeToRoot("CSNetwork")
+            path: .relativeToRoot("LKNetwork")
         )
     }
     
-    static let Interface = project(name: "CSNetwork", isInterface: true)
-    static let Implement = project(name: "CSNetwork", isInterface: false)
+    static let Interface = project(name: "LKNetwork", isInterface: true)
+    static let Implement = project(name: "LKNetwork", isInterface: false)
 }
 
 // MARK: - ThirdParty

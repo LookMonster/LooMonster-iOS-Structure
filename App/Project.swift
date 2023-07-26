@@ -28,8 +28,8 @@ let project = Project(
 //                .ThirdParty.RxRelay,
 //                .ThirdParty.RxSwift,
                 
-                .CSNetwork.Implement,
-                .CSNetwork.Interface,
+                .LKNetwork.Implement,
+                .LKNetwork.Interface,
                 
                 .Feature.Finance.Data.Interface,
                 .Feature.Finance.Domain.Interface,

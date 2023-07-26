@@ -7,7 +7,7 @@ let project = Project.invertedDualTargetProject(
     platform: .iOS,
     iOSTargetVersion: "15.0.0",
     interfaceDependencies: [
-        .CSNetwork.Interface,
+        .LKNetwork.Interface,
         
         .ThirdParty.RxSwift,
         .ThirdParty.RxRelay,
@@ -16,7 +16,7 @@ let project = Project.invertedDualTargetProject(
         
     ],
     implementDependencies: [
-        .CSNetwork.Interface,
+        .LKNetwork.Interface,
         
         .ThirdParty.RxSwift,
         .ThirdParty.RxRelay,
