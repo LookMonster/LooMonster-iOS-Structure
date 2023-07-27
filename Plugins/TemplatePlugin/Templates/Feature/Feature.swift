@@ -80,6 +80,6 @@ let Feature = Template(
 
 extension String {
     static var featureBasePath: Self {
-        return "Features/\(name)"
+        return "Features/User/\(name)"
     }
 }

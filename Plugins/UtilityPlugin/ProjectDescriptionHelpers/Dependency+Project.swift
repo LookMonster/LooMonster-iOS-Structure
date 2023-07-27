@@ -74,7 +74,7 @@ public extension TargetDependency.Feature.Finance {
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/\(folderName)/\(folderName)\(name)"))
+                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
     }
 }
 
@@ -99,7 +99,7 @@ public extension TargetDependency.Feature.Transport {
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/\(folderName)/\(folderName)\(name)"))
+                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
     }
 }
 
@@ -125,7 +125,7 @@ public extension TargetDependency.Feature.Profile {
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/\(folderName)/\(folderName)\(name)"))
+                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
     }
     struct UserInterface {
         public static let Interface = project(name: "UserInterface", isInterface: true)
@@ -149,7 +149,7 @@ public extension TargetDependency.Feature.Home {
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/\(folderName)/\(folderName)\(name)"))
+                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
     }}
 
 public extension TargetDependency.Feature.Home.UserInterface {
