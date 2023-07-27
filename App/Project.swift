@@ -37,7 +37,7 @@ let project = Project(
                 
 //                .Feature.Profile.Data.Interface,
 //                .Feature.Profile.Domain.Interface,
-                .Feature.Profile.UserInterface.Interface,
+//                .Feature.UserProfile.UserInterface.Interface,
                 
 //                .Feature.Home.Data.Interface,
 //                .Feature.Home.Domain.Interface,
@@ -53,7 +53,7 @@ let project = Project(
                 
 //                .Feature.Profile.Data.Implement,
 //                .Feature.Profile.Domain.Implement,
-                .Feature.Profile.UserInterface.Implement,
+//                .Feature.UserProfile.UserInterface.Implement,
                 
 //                .Feature.Home.Data.Implement,
 //                .Feature.Home.Domain.Implement,

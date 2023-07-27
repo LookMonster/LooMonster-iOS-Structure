@@ -10,12 +10,6 @@ extension TargetDependency {
             public struct UserInterface {}
         }
         
-        public struct Profile {
-//            public struct Data {}
-//            public struct Domain {}
-//            public struct UserInterface {}
-
-        }
         public struct Transport {
             public struct Data {}
             public struct Domain {}
@@ -37,6 +31,24 @@ extension TargetDependency {
         }
         
         public struct SignUp {
+            public struct Data {}
+            public struct Domain {}
+            public struct UserInterface {}
+        }
+        
+        public struct OtherProfile {
+            public struct Data {}
+            public struct Domain {}
+            public struct UserInterface {}
+        }
+        
+        public struct UserProfile {
+            public struct Data {}
+            public struct Domain {}
+            public struct UserInterface {}
+        }
+        
+        public struct VendorProfile {
             public struct Data {}
             public struct Domain {}
             public struct UserInterface {}
@@ -130,38 +142,13 @@ public extension TargetDependency.Feature.Transport.Data {
     static let Implement = TargetDependency.Feature.Transport.project(name: "Data", isInterface: false)
 }
 
-
-// MARK: - Features/User/Profile
-public extension TargetDependency.Feature.Profile {
-    static let folderName = "Profile"
-    static func project(name: String, isInterface: Bool) -> TargetDependency {
-        let postfix: String = isInterface ? "" : "Impl"
-        return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
-    }
-    struct UserInterface {
-        public static let Interface = project(name: "UserInterface", isInterface: true)
-        public static let Implement = project(name: "UserInterface", isInterface: false)
-    }
-    
-    struct Domain {
-        public static let Interface = project(name: "Domain", isInterface: true)
-        public static let Implement = project(name: "Domain", isInterface: false)
-    }
-    
-    struct Data {
-        public static let Interface = project(name: "Data", isInterface: true)
-        public static let Implement = project(name: "Data", isInterface: false)
-    }
-}
-
 // MARK: - Features/User/Home
 public extension TargetDependency.Feature.Home {
     static let folderName = "Home"
     static func project(name: String, isInterface: Bool) -> TargetDependency {
         let postfix: String = isInterface ? "" : "Impl"
         return .project(target: "\(folderName)\(name)\(postfix)",
-                        path: .relativeToRoot("Features/User/\(folderName)/\(folderName)\(name)"))
+                        path: .relativeToRoot("Features/User/Main/\(folderName)/\(folderName)\(name)"))
     }}
 
 public extension TargetDependency.Feature.Home.UserInterface {
@@ -226,6 +213,79 @@ public extension TargetDependency.Feature.SignUp.Data {
     static let Interface = TargetDependency.Feature.SignUp.project(name: "Data", isInterface: true)
     static let Implement = TargetDependency.Feature.SignUp.project(name: "Data", isInterface: false)
 }
+
+//MARK: - Features/User/Profile/VendorProfile
+public extension TargetDependency.Feature.VendorProfile {
+    static let folderName = "VendorProfile"
+    static func project(name: String, isInterface: Bool) -> TargetDependency {
+        let postfix: String = isInterface ? "" : "Impl"
+        return .project(target: "\(folderName)\(name)\(postfix)",
+                        path: .relativeToRoot("Features/User/Profile/\(folderName)/\(folderName)\(name)"))
+    }}
+
+public extension TargetDependency.Feature.VendorProfile.UserInterface {
+    static let Interface = TargetDependency.Feature.VendorProfile.project(name: "UserInterface", isInterface: true)
+    static let Implement = TargetDependency.Feature.VendorProfile.project(name: "UserInterface", isInterface: false)
+}
+
+public extension TargetDependency.Feature.VendorProfile.Domain {
+    static let Interface = TargetDependency.Feature.VendorProfile.project(name: "Domain", isInterface: true)
+    static let Implement = TargetDependency.Feature.VendorProfile.project(name: "Domain", isInterface: false)
+}
+
+public extension TargetDependency.Feature.VendorProfile.Data {
+    static let Interface = TargetDependency.Feature.VendorProfile.project(name: "Data", isInterface: true)
+    static let Implement = TargetDependency.Feature.VendorProfile.project(name: "Data", isInterface: false)
+}
+
+//MARK: - Features/User/Profile/OtherProfile
+public extension TargetDependency.Feature.OtherProfile {
+    static let folderName = "OtherProfile"
+    static func project(name: String, isInterface: Bool) -> TargetDependency {
+        let postfix: String = isInterface ? "" : "Impl"
+        return .project(target: "\(folderName)\(name)\(postfix)",
+                        path: .relativeToRoot("Features/User/Profile/\(folderName)/\(folderName)\(name)"))
+    }}
+
+public extension TargetDependency.Feature.OtherProfile.UserInterface {
+    static let Interface = TargetDependency.Feature.OtherProfile.project(name: "UserInterface", isInterface: true)
+    static let Implement = TargetDependency.Feature.OtherProfile.project(name: "UserInterface", isInterface: false)
+}
+
+public extension TargetDependency.Feature.OtherProfile.Domain {
+    static let Interface = TargetDependency.Feature.OtherProfile.project(name: "Domain", isInterface: true)
+    static let Implement = TargetDependency.Feature.OtherProfile.project(name: "Domain", isInterface: false)
+}
+
+public extension TargetDependency.Feature.OtherProfile.Data {
+    static let Interface = TargetDependency.Feature.OtherProfile.project(name: "Data", isInterface: true)
+    static let Implement = TargetDependency.Feature.OtherProfile.project(name: "Data", isInterface: false)
+}
+
+//MARK: - Features/User/Profile/UserProfile
+public extension TargetDependency.Feature.UserProfile {
+    static let folderName = "UserProfile"
+    static func project(name: String, isInterface: Bool) -> TargetDependency {
+        let postfix: String = isInterface ? "" : "Impl"
+        return .project(target: "\(folderName)\(name)\(postfix)",
+                        path: .relativeToRoot("Features/User/Profile/\(folderName)/\(folderName)\(name)"))
+    }}
+
+public extension TargetDependency.Feature.UserProfile.UserInterface {
+    static let Interface = TargetDependency.Feature.UserProfile.project(name: "UserInterface", isInterface: true)
+    static let Implement = TargetDependency.Feature.UserProfile.project(name: "UserInterface", isInterface: false)
+}
+
+public extension TargetDependency.Feature.UserProfile.Domain {
+    static let Interface = TargetDependency.Feature.UserProfile.project(name: "Domain", isInterface: true)
+    static let Implement = TargetDependency.Feature.UserProfile.project(name: "Domain", isInterface: false)
+}
+
+public extension TargetDependency.Feature.UserProfile.Data {
+    static let Interface = TargetDependency.Feature.UserProfile.project(name: "Data", isInterface: true)
+    static let Implement = TargetDependency.Feature.UserProfile.project(name: "Data", isInterface: false)
+}
+
 
 // MARK: - Network
 public extension TargetDependency.LKNetwork {
