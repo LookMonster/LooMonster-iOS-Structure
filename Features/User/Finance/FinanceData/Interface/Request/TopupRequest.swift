@@ -1,5 +1,5 @@
 import Foundation
-import CSNetwork
+import LKNetwork
 import FinanceDomain
 
 public struct TopupRequest: Request {

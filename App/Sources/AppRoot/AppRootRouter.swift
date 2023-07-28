@@ -2,7 +2,7 @@ import RIBs
 import RIBsUtil
 import FinanceUserInterface
 import HomeUserInterface
-import ProfileUserInterface
+import UserProfileUserInterface
 
 protocol AppRootInteractable: Interactable,
                               AppHomeListener,

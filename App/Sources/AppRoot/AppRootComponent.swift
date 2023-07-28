@@ -8,8 +8,8 @@ import HomeUserInterfaceImpl
 import FinanceUserInterface
 import FinanceUserInterfaceImpl
 
-import ProfileUserInterface
-import ProfileUserInterfaceImpl
+//import ProfileUserInterface
+//import ProfileUserInterfaceImpl
 
 import TransportUserInterface
 import TransportUserInterfaceImpl
@@ -20,8 +20,8 @@ import FinanceDataImpl
 import FinanceDomain
 import FinanceDomainImpl
 
-import CSNetwork
-import CSNetworkImpl
+import LKNetwork
+import LKNetworkImpl
 
 final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, ProfileHomeDependency, TransportHomeDependency, TopupDependency, AddPaymentMethodDependency  {
     

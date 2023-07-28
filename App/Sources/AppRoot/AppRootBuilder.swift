@@ -3,11 +3,9 @@ import UIKit
 import FinanceData
 import FinanceUserInterface
 import HomeUserInterface
-import ProfileUserInterface
 
 import FinanceUserInterfaceImpl
 import HomeUserInterfaceImpl
-import ProfileUserInterfaceImpl
 
 
 protocol AppRootDependency: Dependency {
