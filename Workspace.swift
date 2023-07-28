@@ -1,6 +1,6 @@
 import ProjectDescription
 
-let appName = "ModularizedSuperApp"
+let appName = "LookMonster-iOS"
 
 let workspace = Workspace(
     name: appName,
