@@ -11,7 +11,7 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         
         .Core.RIBsUtil,
         
-        .ThirdParty.RIBs,
+        .ThirdParty.SPM.RIBs,
     ],
     implementDependencies: [
         .Feature.Finance.Domain.Interface,
@@ -21,10 +21,10 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         .Core.SuperUI,
         .Core.DefaultsStore,
         
-        .ThirdParty.RIBs,
-        .ThirdParty.RxSwift,
-        .ThirdParty.RxRelay,
-        .ThirdParty.SnapKit
+        .ThirdParty.SPM.RIBs,
+        .ThirdParty.SPM.RxSwift,
+        .ThirdParty.SPM.RxRelay,
+        .ThirdParty.SPM.SnapKit
     ]
 )
 
