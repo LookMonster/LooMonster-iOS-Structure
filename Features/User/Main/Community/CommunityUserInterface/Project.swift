@@ -8,6 +8,8 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
     iOSTargetVersion: "15.0.0",
     interfaceDependencies: [
         .ThirdParty.RIBs,
+        .ThirdParty.SnapKit
+
 //        .ThirdParty.RxSwift,
 //        .ThirdParty.RxRelay,
 //        .Core.RIBsUtil,
@@ -24,6 +26,7 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         
         .Feature.Finance.Data.Interface,
         .Feature.Transport.UserInterface.Interface,
+        .ThirdParty.SnapKit
     ]
 )
 

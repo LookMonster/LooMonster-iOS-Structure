@@ -477,6 +477,7 @@ public extension TargetDependency.ThirdParty {
     static let base = [
         RxSwift,
         RIBs,
+        SnapKit
     ]
     
     static let RxSwift = TargetDependency.external(name: "RxSwift")
