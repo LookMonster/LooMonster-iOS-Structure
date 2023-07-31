@@ -85,7 +85,7 @@ extension Project {
              name: "\(name)Tests",
              platform: platform,
              product: .unitTests,
-             bundleId: "team.io.\(name)Tests",
+             bundleId: "monster.io.\(name)Tests",
              deploymentTarget: .iOS(
                  targetVersion: iOSTargetVersion,
                  devices: [.iphone]
@@ -169,7 +169,7 @@ extension Project {
         return Target(name: name,
                platform: .iOS,
                product: .framework,
-               bundleId: "team.io.\(name)",
+               bundleId: "monster.io.\(name)",
                deploymentTarget: .iOS(targetVersion: iOSTargetVersion, devices: [.iphone]),
                infoPlist: .default,
                sources: ["./\(name)/**"],
@@ -211,7 +211,7 @@ private extension Project {
         return Target(name: name,
                       platform: platform,
                       product: .framework,
-                      bundleId: "team.io.\(name)",
+                      bundleId: "monster.io.\(name)",
                       deploymentTarget: .iOS(
                         targetVersion: iOSTargetVersion,
                         devices: [.iphone]
@@ -227,7 +227,7 @@ private extension Project {
         let sources = Target(name: name,
                              platform: platform,
                              product: .framework,
-                             bundleId: "team.io.\(name)",
+                             bundleId: "monster.io.\(name)",
                              deploymentTarget: .iOS(targetVersion: iOSTargetVersion, devices: [.iphone]),
                              infoPlist: .extendingDefault(with: infoPlist),
 //                             infoPlist: .default,
@@ -254,7 +254,7 @@ private extension Project {
             name: name,
             platform: platform,
             product: .app,
-            bundleId: "team.io.\(name)",
+            bundleId: "monster.io.\(name)",
             deploymentTarget: .iOS(targetVersion: iOSTargetVersion, devices: [.iphone]),
             infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Sources/**"],
@@ -282,7 +282,7 @@ private extension Project {
             name: name,
             platform: platform,
             product: .app,
-            bundleId: "team.io.\(name)",
+            bundleId: "monster.io.\(name)",
             deploymentTarget: .iOS(targetVersion: iOSTargetVersion, devices: [.iphone]),
             infoPlist: InfoPlist(stringLiteral: infoPlist),
             sources: ["Sources/**"],

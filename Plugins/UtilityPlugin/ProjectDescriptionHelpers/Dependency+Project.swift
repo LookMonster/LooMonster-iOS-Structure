@@ -4,6 +4,12 @@ import ProjectDescription
 // MARK: Project
 extension TargetDependency {
     public struct Features {
+        public struct Start {
+            public struct Data {}
+            public struct Domain {}
+            public struct UserInterface {}
+        }
+        
         public struct Vender {
             public struct Auth {
                 public struct Login {
@@ -455,6 +461,30 @@ public extension TargetDependency.Features.User.Profile.UserProfile.Data {
     static let Implement = TargetDependency.Features.User.Profile.UserProfile.project(name: "Data", isInterface: false)
 }
 
+//MARK: - Features/Start
+public extension TargetDependency.Features.Start {
+    static let folderName = "Start"
+    static func project(name: String, isInterface: Bool) -> TargetDependency {
+        let postfix: String = isInterface ? "" : "Impl"
+        return .project(target: "\(folderName)\(name)\(postfix)",
+                        path: .relativeToRoot("Features/\(folderName)/\(folderName)\(name)"))
+    }}
+
+
+public extension TargetDependency.Features.Start.UserInterface {
+    static let Interface = TargetDependency.Features.User.Profile.UserProfile.project(name: "UserInterface", isInterface: true)
+    static let Implement = TargetDependency.Features.User.Profile.UserProfile.project(name: "UserInterface", isInterface: false)
+}
+
+public extension TargetDependency.Features.Start.Domain {
+    static let Interface = TargetDependency.Features.Start.project(name: "Domain", isInterface: true)
+    static let Implement = TargetDependency.Features.Start.project(name: "Domain", isInterface: false)
+}
+
+public extension TargetDependency.Features.Start.Data {
+    static let Interface = TargetDependency.Features.Start.project(name: "Data", isInterface: true)
+    static let Implement = TargetDependency.Features.Start.project(name: "Data", isInterface: false)
+}
 
 // MARK: - Network
 public extension TargetDependency.LKNetwork {
