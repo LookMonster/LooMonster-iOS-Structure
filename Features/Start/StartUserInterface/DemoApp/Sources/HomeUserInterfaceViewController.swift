@@ -1,6 +1,11 @@
 import UIKit
-
+import ResourceKit
+import Then
 class HomeUserInterfaceViewController: UIViewController {
+    
+    var c = CustomButton(title: "asdf", backgroundColor: .black, titleColor: .black).then {
+        $0.backgroundColor = .red
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
