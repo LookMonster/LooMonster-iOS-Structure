@@ -40,6 +40,7 @@ let project = Project(
 //                .Feature.Profile.Domain.Interface,
 //                .Feature.Profile.UserInterface.Interface,
                 .Features.User.Profile.UserProfile.UserInterface.Interface,
+                .Features.User.Profile.UserProfile.UserInterface.Implement,
                 
 //                .Feature.Home.Data.Interface,
 //                .Feature.Home.Domain.Interface,

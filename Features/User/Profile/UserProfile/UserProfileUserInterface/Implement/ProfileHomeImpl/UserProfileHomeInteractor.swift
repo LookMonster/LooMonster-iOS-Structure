@@ -1,12 +1,12 @@
 import RIBs
-import ProfileUserInterface
+import UserProfileUserInterface
 
 protocol UserProfileHomeRouting: ViewableRouting {
   // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol UserProfileHomePresentable: Presentable {
-  var listener: ProfileHomePresentableListener? { get set }
+  var listener: UserProfileHomePresentableListener? { get set }
   // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
