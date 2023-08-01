@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeUserInterfaceViewController: UIViewController {
+class ShopUserInterfaceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

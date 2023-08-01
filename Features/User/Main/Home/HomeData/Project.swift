@@ -1,3 +1,11 @@
+//
+//  HomeAppDelegate.swift
+//
+//  ModulariedSuperApp
+//
+//  Created by 김찬수
+//
+
 import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin

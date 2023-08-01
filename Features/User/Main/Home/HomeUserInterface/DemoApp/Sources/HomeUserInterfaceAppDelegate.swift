@@ -1,3 +1,11 @@
+//
+//  HomeAppDelegate.swift
+//
+//  ModulariedSuperApp
+//
+//  Created by Chansoo on .
+//
+
 import UIKit
 
 @UIApplicationMain

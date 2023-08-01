@@ -38,7 +38,7 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
         // 세가지 자식 riblet을 붙이기 위해서 생성
         let appHome = AppHomeBuilder(dependency: component)
         let financeHome = FinanceHomeBuilder(dependency: component)
-        let profileHome = UserProfileHomeBuilder(dependency: component)
+        let profileHome = UserProfileHomeBuildable(dependency: component)
         let router = AppRootRouter(
             interactor: interactor,
             viewController: tabBar,

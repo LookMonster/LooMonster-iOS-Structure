@@ -8,8 +8,8 @@ import HomeUserInterfaceImpl
 import FinanceUserInterface
 import FinanceUserInterfaceImpl
 
-//import ProfileUserInterface
-//import ProfileUserInterfaceImpl
+import UserProfileUserInterface
+import UserProfileUserInterfaceImpl
 
 import TransportUserInterface
 import TransportUserInterfaceImpl

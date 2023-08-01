@@ -1,3 +1,11 @@
+//
+//  HomeAppDelegate.swift
+//
+//  ModulariedSuperApp
+//
+//  Created by 김찬수
+//
+
 import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
@@ -9,7 +17,6 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
     interfaceDependencies: [
         .ThirdParty.SPM.RIBs,
         .ThirdParty.SPM.SnapKit
-
 //        .ThirdParty.RxSwift,
 //        .ThirdParty.RxRelay,
 //        .Core.RIBsUtil,
@@ -18,7 +25,6 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
     ],
     implementDependencies: [
         .ThirdParty.SPM.RIBs,
-
 //        .ThirdParty.RxSwift,
 //        .ThirdParty.RxRelay,
         

@@ -24,7 +24,8 @@ let project = Project(
             resources: ["Resources/**"],
             dependencies: [
 //                .ResourceKit.Implement,
-//                .ThirdParty.SPM.RIBs
+                
+                .ThirdParty.SPM.RIBs,
 //                .ThirdParty.RxRelay,
 //                .ThirdParty.RxSwift,
                 
@@ -37,11 +38,13 @@ let project = Project(
                 
 //                .Feature.Profile.Data.Interface,
 //                .Feature.Profile.Domain.Interface,
-//                .Feature.UserProfile.UserInterface.Interface,
+//                .Feature.Profile.UserInterface.Interface,
+                .Features.User.Profile.UserProfile.UserInterface.Interface,
                 
 //                .Feature.Home.Data.Interface,
 //                .Feature.Home.Domain.Interface,
 //                .Feature.Home.UserInterface.Interface,
+                .Features.User.Main.Home.UserInterface.Interface,
                 
 //                .Feature.Transport.Data.Interface,
 //                .Feature.Transport.Domain.Interface,
@@ -53,11 +56,13 @@ let project = Project(
                 
 //                .Feature.Profile.Data.Implement,
 //                .Feature.Profile.Domain.Implement,
-//                .Feature.UserProfile.UserInterface.Implement,
+//                .Feature.Profile.UserInterface.Implement,
+                .Features.User.Profile.UserProfile.UserInterface.Interface,
                 
 //                .Feature.Home.Data.Implement,
 //                .Feature.Home.Domain.Implement,
-//                    .Feature.Home..UserInterface.Implement,
+//                .Feature.Home.UserInterface.Implement,
+                .Features.User.Main.Home.UserInterface.Implement,
                 
 //                .Feature.Transport.Data.Implement,
 //                .Feature.Transport.Domain.Implement,
