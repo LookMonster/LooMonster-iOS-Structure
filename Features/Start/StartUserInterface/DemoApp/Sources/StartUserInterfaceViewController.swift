@@ -1,7 +1,8 @@
 import UIKit
 import ResourceKit
 import Then
-class HomeUserInterfaceViewController: UIViewController {
+
+class StartUserInterfaceViewController: UIViewController {
     
     var c = CustomButton(title: "asdf", backgroundColor: .black, titleColor: .black).then {
         $0.backgroundColor = .red
