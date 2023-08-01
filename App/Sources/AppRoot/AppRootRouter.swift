@@ -7,7 +7,7 @@ import UserProfileUserInterface
 protocol AppRootInteractable: Interactable,
                               AppHomeListener,
                               FinanceHomeListener,
-                              ProfileHomeListener {
+                              UserProfileHomeListener {
   var router: AppRootRouting? { get set }
   var listener: AppRootListener? { get set }
 }
@@ -20,7 +20,7 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
   
   private let appHome: AppHomeBuildable
   private let financeHome: FinanceHomeBuildable
-  private let profileHome: ProfileHomeBuildable
+  private let profileHome: UserProfileHomeBuildable
   
   private var appHomeRouting: ViewableRouting?
   private var financeHomeRouting: ViewableRouting?
@@ -31,7 +31,7 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
     viewController: AppRootViewControllable,
     appHome: AppHomeBuildable,
     financeHome: FinanceHomeBuildable,
-    profileHome: ProfileHomeBuildable
+    profileHome: UserProfileHomeBuildable
   ) {
     self.appHome = appHome
     self.financeHome = financeHome

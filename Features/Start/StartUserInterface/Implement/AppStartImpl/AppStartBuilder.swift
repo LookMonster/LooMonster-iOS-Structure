@@ -1,16 +1,16 @@
 import RIBs
 import FinanceData
 import TransportUserInterface
-import HomeUserInterface
+import StartUserInterface
 //import TransportHomeImpl
 
-public protocol AppHomeDependency: Dependency {
+public protocol AppStartDependency: Dependency {
     var cardsOnFileRepository: CardOnFileRepository { get }
     var superPayRepository: SuperPayRepository { get }
     var transportHomeBuildable: TransportHomeBuildable { get }
 }
 
-final class AppHomeComponent: Component<AppHomeDependency> {
+final class AppStartComponent: Component<AppStartDependency> {
     var cardsOnFileRepository: CardOnFileRepository { dependency.cardsOnFileRepository }
     var superPayRepository: SuperPayRepository { dependency.superPayRepository }
     var transportHomeBuildable: TransportHomeBuildable { dependency.transportHomeBuildable }
@@ -18,19 +18,19 @@ final class AppHomeComponent: Component<AppHomeDependency> {
 
 // MARK: - Builder
 
-public final class AppHomeBuilder: Builder<AppHomeDependency>, AppHomeBuildable {
+public final class AppStartBuilder: Builder<AppStartDependency>, AppStartBuildable {
     
-    public override init(dependency: AppHomeDependency) {
+    public override init(dependency: AppStartDependency) {
         super.init(dependency: dependency)
     }
     
-    public func build(withListener listener: AppHomeListener) -> ViewableRouting {
-        let component = AppHomeComponent(dependency: dependency)
-        let viewController = AppHomeViewController()
-        let interactor = AppHomeInteractor(presenter: viewController)
+    public func build(withListener listener: AppStartListener) -> ViewableRouting {
+        let component = AppStartComponent(dependency: dependency)
+        let viewController = AppStartViewController()
+        let interactor = AppStartInteractor(presenter: viewController)
         interactor.listener = listener
         
-        return AppHomeRouter(
+        return AppStartRouter(
             interactor: interactor,
             viewController: viewController,
             transportHomeBuildable: component.transportHomeBuildable

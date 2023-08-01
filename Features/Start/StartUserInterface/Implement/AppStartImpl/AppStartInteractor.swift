@@ -1,23 +1,23 @@
 import RIBs
-import HomeUserInterface
+import StartUserInterface
 
-protocol AppHomeRouting: ViewableRouting {
+protocol AppStartRouting: ViewableRouting {
   func attachTransportHome()
   func detachTransportHome()
 }
 
-protocol AppHomePresentable: Presentable {
-  var listener: AppHomePresentableListener? { get set }
+protocol AppStartPresentable: Presentable {
+  var listener: AppStartPresentableListener? { get set }
   
-  func updateWidget(_ viewModels: [HomeWidgetViewModel])
+  func updateWidget(_ viewModels: [HomeStartViewModel])
 }
 
-final class AppHomeInteractor: PresentableInteractor<AppHomePresentable>, AppHomeInteractable, AppHomePresentableListener {
+final class AppStartInteractor: PresentableInteractor<AppStartPresentable>, AppStartInteractable, AppStartPresentableListener {
   
-  weak var router: AppHomeRouting?
-  weak var listener: AppHomeListener?
+  weak var router: AppStartRouting?
+  weak var listener: AppStartListener?
   
-  override init(presenter: AppHomePresentable) {
+  override init(presenter: AppStartPresentable) {
     super.init(presenter: presenter)
     presenter.listener = self
   }
@@ -26,21 +26,21 @@ final class AppHomeInteractor: PresentableInteractor<AppHomePresentable>, AppHom
     super.didBecomeActive()
     
     let viewModels = [
-      HomeWidgetModel(
+      HomeStartModel(
         imageName: "car",
         title: "슈퍼택시",
         tapHandler: { [weak self] in
           self?.router?.attachTransportHome()
         }
       ),
-      HomeWidgetModel(
+      StartWidgetModel(
         imageName: "cart",
         title: "슈퍼마트",
         tapHandler: { }
       )
     ]
     
-    presenter.updateWidget(viewModels.map(HomeWidgetViewModel.init))
+    presenter.updateWidget(viewModels.map(StartWidgetViewModel.init))
   }
   
   func transportHomeDidTapClose() {

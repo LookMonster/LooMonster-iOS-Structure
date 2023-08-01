@@ -2,26 +2,26 @@ import RIBs
 import RIBsUtil
 import SuperUI
 import TransportUserInterface
-import HomeUserInterface
+import StartUserInterface
 
-protocol AppHomeInteractable: Interactable, TransportHomeListener {
-  var router: AppHomeRouting? { get set }
-  var listener: AppHomeListener? { get set }
+protocol AppStartInteractable: Interactable, TransportHomeListener {
+  var router: AppStartRouting? { get set }
+  var listener: AppStartListener? { get set }
 }
 
-protocol AppHomeViewControllable: ViewControllable {
+protocol AppStartViewControllable: ViewControllable {
 
 }
 
-final class AppHomeRouter: ViewableRouter<AppHomeInteractable, AppHomeViewControllable>, AppHomeRouting {
+final class AppStartRouter: ViewableRouter<AppStartInteractable, AppStartViewControllable>, AppStartRouting {
   
   private let transportHomeBuildable: TransportHomeBuildable
   private var transportHomeRouting: Routing?
   private let transitioningDelegate: PushModalPresentationController
   
   init(
-    interactor: AppHomeInteractable,
-    viewController: AppHomeViewControllable,
+    interactor: AppStartInteractable,
+    viewController: AppStartViewControllable,
     transportHomeBuildable: TransportHomeBuildable
   ) {
     self.transitioningDelegate = PushModalPresentationController()

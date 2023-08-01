@@ -1,15 +1,15 @@
 import RIBs
 import UIKit
 
-protocol ProfileHomePresentableListener: AnyObject {
+protocol VendorProfileHomePresentableListener: AnyObject {
   // TODO: Declare properties and methods that the view controller can invoke to perform
   // business logic, such as signIn(). This protocol is implemented by the corresponding
   // interactor class.
 }
 
-final class ProfileHomeViewController: UIViewController, ProfileHomePresentable, ProfileHomeViewControllable {
+final class VendorProfileHomeViewController: UIViewController, VendorProfileHomePresentable, VendorProfileHomeViewControllable {
   
-  weak var listener: ProfileHomePresentableListener?
+  weak var listener: VendorProfileHomePresentableListener?
   
   init() {
     super.init(nibName: nil, bundle: nil)

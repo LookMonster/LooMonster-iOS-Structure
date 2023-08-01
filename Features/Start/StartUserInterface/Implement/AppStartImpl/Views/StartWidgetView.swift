@@ -1,20 +1,20 @@
 import UIKit
 
-struct HomeWidgetViewModel {
+struct StartWidgetViewModel {
   let image: UIImage?
   let title: String
   let tapHandler: () -> Void
   
-  init(_ model: HomeWidgetModel) {
+  init(_ model: StartWidgetModel) {
     image = UIImage(systemName: model.imageName)
     title = model.title
     tapHandler = model.tapHandler
   }
 }
 
-final class HomeWidgetView: UIView {
+final class StartWidgetView: UIView {
   
-  init(viewModel: HomeWidgetViewModel) {
+  init(viewModel: StartWidgetViewModel) {
     super.init(frame: .zero)
     
     setupViews()
@@ -27,7 +27,7 @@ final class HomeWidgetView: UIView {
   
   private var tapHandler: (() -> Void)?
   
-  private func update(with viewModel: HomeWidgetViewModel) {
+  private func update(with viewModel: StartWidgetViewModel) {
     imageView.image = viewModel.image
     titleLabel.text = viewModel.title
     tapHandler = viewModel.tapHandler

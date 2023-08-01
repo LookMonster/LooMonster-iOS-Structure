@@ -1,12 +1,12 @@
 import RIBs
 import UIKit
 
-protocol AppHomePresentableListener: AnyObject {
+protocol AppStartPresentableListener: AnyObject {
 }
 
-final class AppHomeViewController: UIViewController, AppHomePresentable, AppHomeViewControllable {
+final class AppStartViewController: UIViewController, AppStartPresentable, AppStartViewControllable {
   
-  weak var listener: AppHomePresentableListener?
+  weak var listener: AppStartPresentableListener?
   
   private let widgetStackView: UIStackView = {
     let stackView = UIStackView()
@@ -30,8 +30,8 @@ final class AppHomeViewController: UIViewController, AppHomePresentable, AppHome
     setupViews()
   }
   
-  func updateWidget(_ viewModels: [HomeWidgetViewModel]) {
-    let views = viewModels.map { HomeWidgetView(viewModel: $0) }
+  func updateWidget(_ viewModels: [StartWidgetViewModel]) {
+    let views = viewModels.map { StartWidgetView(viewModel: $0) }
     
     views.forEach {
       $0.addShadowWithRoundedCorners(12)

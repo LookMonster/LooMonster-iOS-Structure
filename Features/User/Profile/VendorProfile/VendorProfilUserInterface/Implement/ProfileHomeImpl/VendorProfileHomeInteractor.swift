@@ -1,23 +1,23 @@
 import RIBs
-import ProfileUserInterface
+import VendorProfileUserInterface
 
-protocol ProfileHomeRouting: ViewableRouting {
+protocol VendorProfileHomeRouting: ViewableRouting {
   // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol ProfileHomePresentable: Presentable {
-  var listener: ProfileHomePresentableListener? { get set }
+protocol VendorProfileHomePresentable: Presentable {
+  var listener: VendorProfileHomePresentableListener? { get set }
   // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-final class ProfileHomeInteractor: PresentableInteractor<ProfileHomePresentable>, ProfileHomeInteractable, ProfileHomePresentableListener {
+final class VendorProfileHomeInteractor: PresentableInteractor<VendorProfileHomePresentable>, VendorProfileHomeInteractable, VendorProfileHomePresentableListener {
   
-  weak var router: ProfileHomeRouting?
-  weak var listener: ProfileHomeListener?
+  weak var router: VendorProfileHomeRouting?
+  weak var listener: VendorProfileHomeListener?
   
   // TODO: Add additional dependencies to constructor. Do not perform any logic
   // in constructor.
-  override init(presenter: ProfileHomePresentable) {
+  override init(presenter: VendorProfileHomePresentable) {
     super.init(presenter: presenter)
     presenter.listener = self
   }
