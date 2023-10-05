@@ -1,0 +1,27 @@
+default_platform(:ios)
+
+# 2. 빌드 및 TestFlight 업로드 주요 명령 정의
+desc "build app and upload to testflight"
+lane :beta do
+  get_certificates # 인증서들 가져오기
+  get_provisioning_profile # 프로비저닝 프로파일 가져오기
+
+  build_app(scheme: "App")
+  upload_to_testflight # TestFlight에 빌드된 앱 업로드
+
+  slack( # Slack 메시지 보내기
+    message: "Testflight 배포 성공",
+    slack_url: "https://hooks.slack.com/services/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"
+  )
+end
+
+platform :ios do
+  error do |lane, exception, options| # 에러 시 발동하는 코드
+    # 에러 발생 시, 슬랙 메시지 전송
+    slack(
+      message: "에러 발생 : #{exception}",
+      success: false,
+      slack_url: "https://hooks.slack.com/services/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"
+    )
+  end
+end

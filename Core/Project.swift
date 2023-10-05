@@ -5,6 +5,10 @@ import UtilityPlugin
 let project = Project(name: "Core",
                       targets: [
                         Project.makeTarget(
+                            name: "CSLogger",
+                            dependencies: []
+                        ),
+                        Project.makeTarget(
                             name: "DefaultsStore",
                             dependencies: [
                             ]
@@ -15,6 +19,12 @@ let project = Project(name: "Core",
                                 .ThirdParty.SPM.RIBs,
 //                                .ThirdParty.RxSwift,
                                 .Core.RIBsUtil,
+                                .ThirdParty.SPM.RxCocoa,
+                                .ThirdParty.SPM.RxSwift,
+                                .ThirdParty.SPM.SnapKit,
+                                .ThirdParty.SPM.Then,
+                                .DesignSystem.Implement,
+                                .ThirdParty.SPM.Swinject
                             ]
                         ),
                         Project.makeTarget(
@@ -22,6 +32,7 @@ let project = Project(name: "Core",
                             dependencies: [
                                 .ThirdParty.SPM.RIBs,
 //                                .ThirdParty.RxSwift,
+                                .ThirdParty.SPM.Swinject
                             ]
                         )
                       ])

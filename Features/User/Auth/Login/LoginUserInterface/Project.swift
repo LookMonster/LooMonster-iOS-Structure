@@ -12,6 +12,7 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         .Core.RIBsUtil,
         
         .ThirdParty.SPM.RIBs,
+        .TokenManager.Interface
     ],
     implementDependencies: [
         .Feature.Finance.Domain.Interface,
@@ -24,6 +25,16 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         .ThirdParty.SPM.RIBs,
         .ThirdParty.SPM.RxSwift,
         .ThirdParty.SPM.RxRelay,
-        .ThirdParty.SPM.SnapKit
-    ]
+        .ThirdParty.SPM.SnapKit,
+        .ThirdParty.SPM.Swinject,
+        .DesignSystem.Implement
+    ],
+    demoAppDependencies: [
+        .Features.User.Auth.Login.Data.Implement,
+        .Features.User.Auth.Login.Domain.Implement,
+        .ThirdParty.SPM.Swinject,
+        .LKNetwork.Implement,
+        .TokenManager.Implement
+    ],
+    isUserInterface: true
 )

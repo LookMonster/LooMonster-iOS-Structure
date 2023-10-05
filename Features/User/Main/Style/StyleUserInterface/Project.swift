@@ -26,6 +26,7 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         
         .Feature.Finance.Data.Interface,
         .Feature.Transport.UserInterface.Interface,
+        .DesignSystem.Implement
     ]
 )
 
