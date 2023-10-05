@@ -1,6 +1,9 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FLookMonster%2FLookMonster-iOS&count_bg=%230D0D0D&title_bg=%23000000&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+## **☝🏿 LookMonster Architecture**
 
-**LookMonster-iOS 프로젝트 시작 방법**
+<img width="480" src="https://github.com/LookMonster/LooMonster-iOS-Structure/assets/102890390/fd69ef60-4d35-4870-8105-bd09cb2ed250"/>
+
+## **✌🏿 LookMonster Module Start**
+**LookMonster Module 프로젝트 시작 방법**
 
 1. 터미널을 열고 다음 명령어를 차례로 실행하여 "monster" 명령어를 등록합니다:
     
@@ -34,3 +37,11 @@
     ```Swift
     sh monster_create_rib.sh Question "/Users/junha/Desktop/LookMonster/LookMonster-iOS/Features/User/Main/Community/CommunityUserInterface/Implement/AppCommunityImpl/Views" Community
     ```
+
+## 👊🏿 Why should I use this module?
+- 위 모듈을 RIBs와 Tuist를 기반으로 만든 모듈입니다.
+  - RIBs 기반의 모듈화를 원하시면 추천드립니다.
+  - 테스트가 빨라지고 기능 단위로 앱을 만들기 편해집니다.
+  - 의존성 관리가 편해집니다.
+  - 의존성 트리 완벽해짐
+
