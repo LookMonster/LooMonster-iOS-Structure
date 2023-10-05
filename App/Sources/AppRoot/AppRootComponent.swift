@@ -11,6 +11,9 @@ import FinanceUserInterfaceImpl
 import UserProfileUserInterface
 import UserProfileUserInterfaceImpl
 
+import StyleUserInterface
+import StyleUserInterfaceImpl
+
 import TransportUserInterface
 import TransportUserInterfaceImpl
 
@@ -23,7 +26,13 @@ import FinanceDomainImpl
 import LKNetwork
 import LKNetworkImpl
 
-final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, UserProfileHomeDependency, TransportHomeDependency, TopupDependency, AddPaymentMethodDependency  {
+import CommunityUserInterface
+import CommunityUserInterfaceImpl
+
+import ShopUserInterface
+import ShopUserInterfaceImpl
+
+final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, UserProfileHomeDependency, TransportHomeDependency, TopupDependency, AddPaymentMethodDependency, StyleHomeDependency, CommunityDependency, ShopHomeDependency  {
     
     var fetchBalanceUseCase: FetchBalanceUseCase
     var fetchCardsUseCase: FetchCardsUseCase
@@ -59,20 +68,20 @@ final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, F
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [SuperAppURLProtocol.self]
         
-        setupURLProtocol()
+//        setupURLProtocol()
         
         let network = NetworkImp(session: URLSession(configuration: config))
         
         cardsOnFileRepository = CardOnFileRepositoryImpl(
             network: network,
-            baseURL: BaseURL().financeBaseURL
+            baseURL: BaseURL().mainURL
         )
         
         self.cardsOnFileRepository.fetch()
         
         self.superPayRepository = SuperPayRepositoryImpl(
             network: network,
-            baseURL: BaseURL().financeBaseURL
+            baseURL: BaseURL().mainURL
         )
         
         self.addPaymentMethodUseCase = AddPaymentMethodUseCaseImpl(cardOnFileRepository: cardsOnFileRepository)
