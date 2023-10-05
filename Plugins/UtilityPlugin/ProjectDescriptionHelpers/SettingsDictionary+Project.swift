@@ -46,12 +46,14 @@ public extension SettingsDictionary {
     
     func setCodeSignManual() -> SettingsDictionary {
         merging(["CODE_SIGN_STYLE": SettingValue(stringLiteral: "Manual")])
+        // 자신의 애플 고유 아이디를 넣어주세요
             .merging(["DEVELOPMENT_TEAM": SettingValue(stringLiteral: "92YDTRVDUA")])
             .merging(["CODE_SIGN_IDENTITY": SettingValue(stringLiteral: "iPhone Developer")])
     }
     
     func setCodeSignManualForApp() -> SettingsDictionary {
         merging(["CODE_SIGN_STYLE": SettingValue(stringLiteral: "Manual")])
+        // 자신의 애플 고유 아이디를 넣어주세요
             .merging(["DEVELOPMENT_TEAM": SettingValue(stringLiteral: "92YDTRVDUA")])
             .merging(["CODE_SIGN_IDENTITY": SettingValue(stringLiteral: "iPhone Developer")])
     }

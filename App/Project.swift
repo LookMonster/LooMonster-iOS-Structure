@@ -3,6 +3,7 @@ import ProjectDescriptionHelpers
 import UtilityPlugin
 
 let project = Project(
+    // 자신의 앱 이름을 넣어주세요
     name: "App",
     targets: [
         Target(
@@ -23,12 +24,7 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                //                .ResourceKit.Implement,
-                
                 .ThirdParty.SPM.RIBs,
-                //                .ThirdParty.RxRelay,
-                //                .ThirdParty.RxSwift,
-                
                 .LKNetwork.Implement,
                 .LKNetwork.Interface,
                 
@@ -69,7 +65,6 @@ let project = Project(
                 .Features.User.Main.Shop.Data.Interface,
                 .Features.User.Main.Shop.UserInterface.Interface
             ]
-//            settings: settings
         )
     ]
 )
