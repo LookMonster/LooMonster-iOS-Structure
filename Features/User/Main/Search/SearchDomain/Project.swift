@@ -10,7 +10,6 @@ let project = Project.invertedDualTargetProject(
         .ThirdParty.SPM.RxSwift,
     ],
     implementDependencies: [
-        .ThirdParty.SPM.RxSwift,
-        .Feature.Finance.Data.Interface,
+        .ThirdParty.SPM.RxSwift
     ]
 )

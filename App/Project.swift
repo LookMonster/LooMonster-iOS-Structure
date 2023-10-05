@@ -33,28 +33,15 @@ let project = Project(
                 .LKNetwork.Interface,
                 
                 .ThirdParty.SPM.Swinject,
-                
-                .Feature.Finance.Data.Interface,
-                .Feature.Finance.Domain.Interface,
-                .Feature.Finance.UserInterface.Interface,
-                
-                .Feature.Finance.Data.Implement,
-                .Feature.Finance.Domain.Implement,
-                .Feature.Finance.UserInterface.Implement,
-                
                 .Features.User.Profile.UserProfile.UserInterface.Interface,
                 .Features.User.Profile.UserProfile.UserInterface.Implement,
                 .Features.User.Profile.UserProfile.UserInterface.Interface,
                 
 
                 .Features.User.Main.Home.UserInterface.Interface,
-                    
-                .Feature.Transport.UserInterface.Interface,
-
+                
                 .Features.User.Main.Home.UserInterface.Implement,
-                
-                .Feature.Transport.UserInterface.Implement,
-                
+                                
                 //style
                 .Features.User.Main.Style.Domain.Implement,
                 .Features.User.Main.Style.Data.Implement,

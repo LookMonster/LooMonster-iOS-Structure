@@ -10,10 +10,7 @@ let project = Project.invertedDualTargetProject(
         .LKNetwork.Interface,
         
         .ThirdParty.SPM.RxSwift,
-        .ThirdParty.SPM.RxRelay,
-        
-        .Feature.Finance.Domain.Interface,
-        
+        .ThirdParty.SPM.RxRelay
     ],
     implementDependencies: [
         .LKNetwork.Interface,
@@ -21,6 +18,5 @@ let project = Project.invertedDualTargetProject(
         .ThirdParty.SPM.RxSwift,
         .ThirdParty.SPM.RxRelay,
         
-        .Feature.Finance.Domain.Interface,
     ]
 )

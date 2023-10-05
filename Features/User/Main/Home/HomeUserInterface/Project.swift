@@ -35,8 +35,6 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
         .Core.RIBsUtil,
         .Core.SuperUI,
         
-        .Feature.Finance.Data.Interface,
-        .Feature.Transport.UserInterface.Interface,
         .ThirdParty.SPM.RIBs,
         .ThirdParty.SPM.RxSwift,
         .ThirdParty.SPM.RxRelay,

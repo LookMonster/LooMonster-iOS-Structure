@@ -6,18 +6,13 @@ let project = Project.invertedDualTargetProjectWithDemoApp(
     name: "SignUpUserInterface",
     platform: .iOS,
     iOSTargetVersion: "15.0.0",
-    interfaceDependencies: [
-        .Feature.Finance.Domain.Interface,
-        
+    interfaceDependencies: [        
         .Core.RIBsUtil,
         
         .ThirdParty.SPM.RIBs,
         .TokenManager.Interface
     ],
     implementDependencies: [
-        .Feature.Finance.Domain.Interface,
-        .Feature.Finance.Data.Interface,
-        
         .Core.RIBsUtil,
         .Core.SuperUI,
         .Core.DefaultsStore,

@@ -12,11 +12,6 @@ import UtilityPlugin
 
 let project = Project(
     name: "DesignSystem",
-//    organizationName: "com.monster.lookMonster",
-//    settings: .settings(configurations: [
-//        .debug(name: "Debug", xcconfig: .relativeToRoot("Config/Debug.xcconfig")),
-//        .release(name: "Release", xcconfig: .relativeToRoot("Config/Release.xcconfig")),
-//    ]),
     targets: [
         Target(
             name: "DesignSystem",
